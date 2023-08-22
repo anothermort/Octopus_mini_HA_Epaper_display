@@ -17,7 +17,9 @@ Ideally have an Octopus Mini
 Home Assistant Setup with ESPHome
 
 **Setup**
+
 Connect your display to your ESP32 as via the pins in yaml
+
 Copy yaml into ESPhome and install on ESP32
 
 **Data displayed currently**
