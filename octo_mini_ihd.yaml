@@ -1,0 +1,148 @@
+esphome:
+  name: octo-mini-ihd
+  friendly_name: Octo_mini_ihd
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "****"
+
+ota:
+  password: "****"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Octo-Mini Fallback Hotspot"
+    password: "****"
+
+
+  # Example configuration entry
+font:
+  - file: 'fonts/Roboto-Regular.ttf'
+    id: font1
+    size: 40
+  - file: 'fonts/Roboto-Regular.ttf'
+    id: font2
+    size: 20
+
+image:
+  - file: 'images/home_mini_banner_color.png'
+    id: mini
+  - file: mdi:lightning-bolt
+    id: elec
+    resize: 40x40
+  - file: mdi:fire
+    id: gas
+    resize: 40x40 
+  - file: mdi:currency-gbp
+    id: pound
+    resize: 40x40     
+  - file: mdi:battery-50
+    id: batt
+    resize: 40x40 
+  - file: mdi:percent-outline
+    id: percent
+    resize: 30x30 
+
+    
+time:
+  - platform: sntp
+    id: esptime
+
+sensor:
+  - platform: homeassistant
+    id: elec_use
+    entity_id: sensor.octopus_energy_electricity_****_current_accumulative_consumption
+    internal: true
+  - platform: homeassistant
+    id: gas_use
+    entity_id: sensor.octopus_energy_gas_*****_current_accumulative_consumption
+    internal: true
+  - platform: homeassistant
+    id: elec_cost
+    entity_id: sensor.octopus_energy_electricity_*****_current_accumulative_cost
+    internal: true
+  - platform: homeassistant
+    id: gas_cost
+    entity_id: sensor.octopus_energy_gas_*****_current_accumulative_cost
+    internal: true
+  - platform: homeassistant
+    id: soc
+    entity_id: sensor.victron_system_battery_soc
+    internal: true
+
+
+
+
+# Pins for Waveshare ePaper ESP Board
+spi:
+  clk_pin: GPIO13
+  mosi_pin: GPIO14
+
+
+# Now render everything on the ePaper screen.
+display:
+
+       
+  - platform: waveshare_epaper
+    id: eink_display
+    cs_pin: GPIO15
+    dc_pin: GPIO27
+    busy_pin: GPIO25
+    reset_pin: GPIO26
+    reset_duration: 200ms
+    model: 2.90inv2
+    update_interval: 1min
+    # If everything works, try to set full_update_every to 30 or 60
+    full_update_every: 1
+    rotation: 90°
+    lambda: |-
+
+
+       //it.image(0, 0, id(mini));
+          if (id(soc).has_state()) {
+            // Print time in HH:MM format
+            it.strftime(187, 35, id(font1), TextAlign::BASELINE_LEFT, "%H:%M", id(esptime).now());            
+            it.image(0, 0, id(batt));     
+            it.image(87, 10, id(percent));         
+            it.printf(45, 35, id(font1), TextAlign::BASELINE_LEFT ,"%.0f", id(soc).state);
+
+        }  
+          if (id(elec_use).has_state()) {
+            it.printf(120, 55, id(font2), "kWh");            
+            it.image(0, 45, id(elec));            
+            it.printf(40, 75, id(font1), TextAlign::BASELINE_LEFT ,"%.2f", id(elec_use).state);
+        }        
+
+      
+          if (id(gas_use).has_state()) {
+            it.printf(120, 100, id(font2), "kWh");             
+            it.image(0, 85, id(gas));            
+            it.printf(40, 120, id(font1), TextAlign::BASELINE_LEFT ,"%.2f", id(gas_use).state);
+        }  
+        
+        if (id(elec_use).has_state()) {
+          it.printf(210, 75, id(font1), TextAlign::BASELINE_LEFT ,"%.2f", id(elec_cost).state);
+          it.image(180, 40, id(pound));
+        }        
+
+        if (id(gas_use).has_state()) {
+          it.image(180, 85, id(pound));         
+          it.printf(210, 120, id(font1), TextAlign::BASELINE_LEFT ,"%.2f", id(gas_cost).state);
+        }    
+
+
+
+captive_portal:
