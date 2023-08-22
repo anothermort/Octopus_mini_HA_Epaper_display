@@ -11,13 +11,16 @@ https://github.com/BottlecapDave/HomeAssistant-OctopusEnergy
 Connect your display to your ESP32 as via the pins in yaml
 Copy yaml into ESPhome and install on ESP32
 
-Data displayed currently
+**Data displayed currently**
 
 Current battery SOC % from Victron system
-Current local tome
+
+Current local time
 
 Electricity kWh used today
+
 Gas kWh used today
 
 Cost Electricity used today including standing charge
+
 Cost Gas used today including standing charge
