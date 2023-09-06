@@ -52,6 +52,13 @@ Make a case for display and ESP32
 **Screen Shot of current version**
 ![octo_mini_ihd](https://github.com/anothermort/Octopus_mini_HA_Epaper_display/assets/13786570/8ec0d6b5-a538-4f6d-b943-ccaa1fdc46f6)
 
+
+
+
+
+
+
+
 **If you would like to switch to Octopus Energy you can support me
 A friends & family link below and we split £100 credit with every one who joins through your unique link:
 https://share.octopus.energy/melon-rook-819** 
