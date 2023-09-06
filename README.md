@@ -59,7 +59,7 @@ Make a case for display and ESP32
 
 
 
-**If you would like to switch to Octopus Energy you can support me
-A friends & family link below and we split £100 credit with every one who joins through your unique link:
+**If you would like to switch to Octopus Energy you can support me.
+A friends & family link is below and we split £100 credit if you join through the unique link:
 https://share.octopus.energy/melon-rook-819** 
 
