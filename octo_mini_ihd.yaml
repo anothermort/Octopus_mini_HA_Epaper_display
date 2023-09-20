@@ -123,14 +123,14 @@ display:
           if (id(elec_use).has_state()) {
             it.printf(120, 55, id(font2), "kWh");            
             it.image(0, 45, id(elec));            
-            it.printf(40, 75, id(font1), TextAlign::BASELINE_LEFT ,"%.2f", id(elec_use).state);
+            it.printf(40, 75, id(font1), TextAlign::BASELINE_LEFT ,"%.1f", id(elec_use).state);
         }        
 
       
           if (id(gas_use).has_state()) {
             it.printf(120, 100, id(font2), "kWh");             
             it.image(0, 85, id(gas));            
-            it.printf(40, 120, id(font1), TextAlign::BASELINE_LEFT ,"%.2f", id(gas_use).state);
+            it.printf(40, 120, id(font1), TextAlign::BASELINE_LEFT ,"%.1f", id(gas_use).state);
         }  
         
         if (id(elec_use).has_state()) {
