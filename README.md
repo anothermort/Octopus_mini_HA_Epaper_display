@@ -12,7 +12,7 @@ https://github.com/BottlecapDave/HomeAssistant-OctopusEnergy
 
 To be a customer of Octopus Energy
 
-Ideally have an Octopus Mini
+Have an Octopus Mini
 
 Home Assistant Setup with ESPHome
 
@@ -40,6 +40,8 @@ Gas kWh used today
 Cost Electricity used today including standing charge
 
 Cost Gas used today including standing charge
+
+Pulls data every 60 seconds.
 
 **To Do**
 
