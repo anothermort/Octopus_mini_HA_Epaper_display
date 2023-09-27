@@ -16,9 +16,9 @@ Have an Octopus Mini
 
 Home Assistant Setup with ESPHome
 
-[ESP32 £7 from Amazon](https://www.amazon.co.uk/dp/B071JR9WS9/?coliid=I22Y46Q1TSMUTG&colid=4TI88AT1TSQY&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it) programmed  via ESPhome
+[ESP32 £7 from Amazon](http://www.amazon.co.uk/dp/B071JR9WS9/ref=nosim?tag=anothermort-21) programmed  via ESPhome
 
-[Waveshare 2.9" E Paper screen £25.99 from Amazon ](https://www.amazon.co.uk/dp/B071LGVVL1?psc=1&ref=ppx_yo2ov_dt_b_product_details)
+[Waveshare 2.9" E Paper screen £25.99 from Amazon ]http://www.amazon.co.uk/dp/B071LGVVL1/ref=nosim?tag=anothermort-21)
 
 
 **Setup**
