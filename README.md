@@ -19,7 +19,8 @@ Home Assistant Setup with ESPHome
 [ESP32 £7 from Amazon](http://www.amazon.co.uk/dp/B071JR9WS9/ref=nosim?tag=anothermort-21) programmed  via ESPhome
 
 [Waveshare 2.9" E Paper screen £25.99 from Amazon ](http://www.amazon.co.uk/dp/B071LGVVL1/ref=nosim?tag=anothermort-21)
-** Amazon affiliate links you will not be charged anymore than standard price but I will get a small commision on any purchase. **
+
+** Amazon affiliate links above - you will not be charged anymore than standard price, but I will get a small commission on any purchase. **
 
 **Setup**
 
