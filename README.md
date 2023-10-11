@@ -48,11 +48,13 @@ Pulls data every 60 seconds.
 
 Start up Splash screen
 
-Allow display of larger values of cost and kWh usage.
+[Allow display of larger values of cost and kWh usage.](url)
 
 Make a case for display and ESP32 
 
-**** Currently not displaying negative values correctly i.e. Agile can cause you cost to be negative on a plunge ****
+[**** Currently not displaying negative values correctly i.e. Agile can cause you cost to be negative on a plunge ****](url)
+
+Setup code for a larger screen size
 
 **Screen Shot of current version**
 ![octo_mini_ihd](https://github.com/anothermort/Octopus_mini_HA_Epaper_display/assets/13786570/8ec0d6b5-a538-4f6d-b943-ccaa1fdc46f6)
