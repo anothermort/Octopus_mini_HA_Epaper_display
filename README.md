@@ -48,11 +48,7 @@ Pulls data every 60 seconds.
 
 Start up Splash screen
 
-[Allow display of larger values of cost and kWh usage.](url)
-
 Make a case for display and ESP32 
-
-[**** Currently not displaying negative values correctly i.e. Agile can cause you cost to be negative on a plunge ****](url)
 
 Setup code for a larger screen size
 
