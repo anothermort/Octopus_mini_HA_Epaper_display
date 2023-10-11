@@ -52,6 +52,8 @@ Allow display of larger values of cost and kWh usage.
 
 Make a case for display and ESP32 
 
+**** Currently not displaying negative values correctly i.e. Agile can cause you cost to be negative on a plunge ****
+
 **Screen Shot of current version**
 ![octo_mini_ihd](https://github.com/anothermort/Octopus_mini_HA_Epaper_display/assets/13786570/8ec0d6b5-a538-4f6d-b943-ccaa1fdc46f6)
 
